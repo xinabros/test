@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import Analytics from "@/components/Analytics";
+import Tidio, { getTidioKey } from "@/components/Tidio";
 
 export const metadata: Metadata = {
   title: { default: "Test Shop", template: "%s · Test Shop" },
@@ -25,7 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <main>{children}</main>
           <Footer />
-          <Chatbot />
+          {/* Con Tidio configurato usiamo la sua chat, altrimenti il chatbot interno */}
+          {getTidioKey() ? <Tidio /> : <Chatbot />}
         </CartProvider>
         <Analytics />
       </body>

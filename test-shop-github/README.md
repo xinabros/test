@@ -19,6 +19,7 @@ Build di produzione: `npm run build && npm run start`.
 | `STRIPE_SECRET_KEY` | Sì (per il checkout) | Chiave segreta Stripe di test (`sk_test_...`) |
 | `NEXT_PUBLIC_SITE_URL` | No | URL pubblico usato per i redirect Stripe; se vuota viene ricavata dalla richiesta |
 | `NEXT_PUBLIC_GA_ID` | No | ID GA4 (`G-XXXXXXX`); se vuota GA non viene caricato |
+| `NEXT_PUBLIC_TIDIO_KEY` | No | Public key di Tidio; se impostata sostituisce il chatbot interno con la chat Tidio |
 
 ## Struttura
 
